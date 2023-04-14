@@ -1,0 +1,742 @@
+{
+    // Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+
+    //Always remember
+    //1. variables declared inside for are made by copy
+
+    //techniques/approach
+    //1. when to check whether any value/char/string repeating or not
+    //use vector of that number of values and give each 0 value whenevr any value comes make it 1.
+    //..for this maps can also be used
+    //2. Check reoccurance/no. of occurance/position of element, use vector of numbers or alphabets
+    // int n;
+    // cin >> n;
+    // string s;
+    // cin >> s;
+    // int flag=1;
+    // vector<int> a(26,0);
+    // a[s[0]-'A']=1;
+
+    // for (int i = 1; i < n; i++)
+    // {
+    //     if(s[i]==s[i-1]){
+    //         continue;
+    //     }
+    //     else
+    //     {
+    //         if((a[s[i]-'A'])>0){
+    //             cout << "NO"<<'\n';
+    //             flag=0;
+    //             break;
+    //         } 
+    //     }
+    //     a[s[i]-'A']++;
+        
+    // }
+    // if(flag==1){
+
+    //     cout << "YES"<<'\n';
+    // }
+
+    //3. to setprecesion use : cout << fixed<<setprecision(9)<< maxval<<'\n';
+    //4. for reference point max=INT_MIN and min=INT_MAX
+    //   maxno=max(maxno,a[i]);
+    //   minno=min(minno, a[i]);
+    //   position of element from left is x then postion of it from right will be (n)-x
+    //   use max and min functions widely (in distance/position/traverse in array or vector of elemts)
+    //   reduce for loops by using max and min
+    //   int m1=max(lmax, lmin);
+    //   int m2=max(rmax, rmin);
+
+    //   int m3=(min(lmax, lmin) + min(rmax, rmin));
+    
+    "cpp snippet": {
+        "prefix": "cpp",
+        "body":  [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "#define int long long",
+            "#define pi (3.141592653589)",
+            "#define mod 1000000007",
+            "#define int long long",
+            "#define float double",
+            "#define pb push_back",
+            "#define mp make_pair",
+            "#define ff first",
+            "#define ss second",
+            "#define all(c) c.begin(), c.end()",
+            "#define min3(a, b, c) min(c, min(a, b))",
+            "#define min4(a, b, c, d) min(d, min(c, min(a, b)))",
+            "#define rrep(i, n) for(int i=n-1;i>=0;i--)",
+            "#define rep(i,n) for(int i=0;i<n;i++)",
+            "#define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);",
+            "\n",
+
+            "bool isPrime(int n){",
+            "    if(n==1) return false;",
+            "    if(n==2) return true;",
+            "    for(int i=2;i*i<=n;i++){",
+            "        if(n%i==0)return false;",
+            "    }",
+            
+            "    return true;",
+            "}\n",
+            "int32_t main(){",
+            "fast",
+            "\n",
+            "\n",
+            "int t=1;",
+            "cin>>t;",
+            "while(t--){",
+            "    $0",
+            "}",
+            "return 0;",
+            "}",
+            "",
+        
+        ],
+        "description": "This is a c++ snippet",
+        
+    },
+    "include":{
+        "prefix": "include",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "int main(){",
+                "    int t;",
+                "    cin >> t;",
+                "while (t--){",
+                "    int $0;",
+                "}",
+
+
+                "    return 0;",
+            "}",
+        ],
+        "description": "C++ snippet"
+    },
+
+    "cout": {
+        "prefix": "cout",
+        "body": [
+            "cout << $0;",  
+        ],
+        "description": "cout snippet for c++"
+    },
+    "cin": {
+        "prefix": "cin",
+        "body": [
+            "cin >> $0;",   
+        ],
+        "description": "cin snippet for c++"
+    },
+    "uppercase funtion": {
+        "prefix": "uppercase function",
+        "body": [   
+            "char upper(char c){",
+                "return 'A'+(c-'a');",
+            "}",
+        ],
+        "description": "uppercase snippet for c++"
+    },
+    "binary to decimal funtion": {
+        "prefix": "binary to decimal funtion",
+        "body": [   
+            "string s;",
+    "        cin >> s;",
+    "        int bidigit;",
+    "        long long power2=1, decimal=0;",
+    
+    "        for (int j = (s.size()-1); j >= 0; j--)",
+    "        {",
+    "    bidigit= s[j]-'0';",
+    "    decimal=decimal+ (bidigit*power2);",
+    "    power2=power2*2;",
+    "}",
+    "cout << decimal<<'endl';",
+        ],
+        "description": "binary to decimal funtion snippet for c++"
+    },
+    "lcm funtion": {
+        "prefix": "lcm funtion",
+        "body": [   
+            "int lcm(int a, int b){",
+                "int hcf, temp;",
+            
+                "hcf = a;",
+                "temp = b;",
+                
+                "while(hcf != temp)",
+                "{",
+                    "if(hcf > temp)",
+                        "hcf -= temp;",
+                    "else",
+                        "temp -= hcf;",
+                "}",
+            
+                "return (a * b) / hcf;",
+            "}",
+        ],
+        "description": "lcm funtion snippet for c++"
+    },
+
+    "gcd or hcf function": {
+        "prefix": "gcd or hcf function",
+        "body": [
+          "int gcdo(int a, int b)",
+          "{",
+          "",
+          "    while (a != 0 && b != 0)",
+          "    {",
+          "        if (a > b)",
+          "        {",
+          "            a = a - b;",
+          "        }",
+          "        else",
+          "            b = b - a;",
+          "    }",
+          "    if (a != 0)",
+          "        return a;",
+          "    else",
+          "        return b;",
+          "}"
+        ],
+        "description": "gcd or hcf function"
+      },
+
+      "gcd or hcf function adv": {
+        "prefix": "gcd or hcf function adv",
+        "body": [
+          "int gcdo(int a, int b) {",
+          "    if (a == 0) {",
+          "        return b;",
+          "    }",
+          "    return gcdo(b % a, a);",
+          "}"
+        ],
+        "description": "gcd or hcf function adv"
+      },
+    
+    "pascal triangle user snippet ": {
+        "prefix": "Pascal triangle",
+        "body": [
+          "int n;",
+          "        cin >> n;",
+          "        long long int a[n][n];  //beacuse of addition crossing limit of integers ",
+          "        a[0][0]=1;",
+          "",
+          "        for (int i = 1; i < n; i++)",
+          "        {",
+          "            a[i][0]=1;",
+          "            a[i][i]=1;",
+          "",
+          "            for (int j = 1; j < i; j++)",
+          "            {",
+          "                a[i][j]= a[i-1][j]+a[i-1][j-1];",
+          "            }",
+          "            ",
+          "",
+          "        }",
+          "        for (int i = 0; i < n; i++)",
+          "        {",
+          "            for (int j = 0; j <= i; j++)",
+          "            {",
+          "                cout << a[i][j] << \" \";",
+          "            }",
+          "            cout << '\\n';",
+          "            ",
+          "",
+          "        }"
+        ],
+        "description": "pascal triangle user snippet "
+      },
+
+      "print vector user snippet ": {
+        "prefix": "Print Vector",
+        "body": [
+          "void printVec(vector<int> v){    //use &v to not make copy", 
+          "    for (int i = 0; i < v.size(); i++) //O(1)",
+          "    {",
+          "        cout << v[i]<<\" \"; ",
+          "    }  ",
+          "    cout << '\\n';",
+          "}",
+          "printVec(v);"
+        ],
+        "description": "print vector user snippet "
+      },
+    
+
+    "for loop":{
+        "prefix": "forl",
+        "body": ["for($1 $2 = $3 ; $2 < $4 ; $2++)","{","    ${0:/* code */}","}"],
+        "description": "For Loop"
+    },
+
+    "vector of vector user snippet ": {
+        "prefix": "Vector of vector",
+        "body": [
+          "#include <bits/stdc++.h>",
+          "using namespace std;",
+          "",
+          "void printVec(vector<int> &v)",
+          "{                                      // use &v to not make copy",
+          "    for (int i = 0; i < v.size(); i++) // O(1)",
+          "    {",
+          "        cout << v[i]<< \" \";",
+          "    }",
+          "    cout << '\\n';",
+          "}",
+          "",
+          "int main()",
+          "{",
+          "",
+          "    int N;",
+          "    cin >> N;",
+          "",
+          "    vector<vector<int>> v;",
+          "",
+          "    for (int i = 0; i < N; i++)",
+          "    {",
+          "        int n;",
+          "        cin >> n;",
+          "        v.push_back(vector<int>());  //empty vector is pushing every time then filling it",
+          "",
+          "        for (int j = 0; j < n; j++)",
+          "        {",
+          "            int x;",
+          "            cin >> x;",
+          "            v[i].push_back(x);",
+          "        }",
+          "    }",
+          "",
+          "    for (int i = 0; i < N; i++)",
+          "    {",
+          "        printVec(v[i]);",
+          "    }",
+          "",
+          "    return 0;",
+          "}"
+        ],
+        "description": "vector of vector user snippet "
+      },
+
+      "for loop for iterator ": {
+        "prefix": "for iterator loop",
+        "body": [
+          "vector <int> :: iterator it = v.begin; ",
+          " for(it=v.begin(); it!=v.end(); it++){",
+          "    ${0:/* code */}",
+          " }"
+        ],
+        "description": "for loop for iterator "
+      },
+
+      "advance iterator for loop using auto and ranged based loops": {
+        "prefix": "advance iterator for loop",
+        "body": [
+          "for(auto &value : v_p){   //by copy",
+          "cout<< value.first << \" \" << value.second << '\\n';",
+          "}"
+        ],
+        "description": "advance iterator for loop using auto and ranged based loops"
+      },
+
+
+
+
+
+}
+
+//for optimisation use:
+
+//max array size globally defined is 10^7 and locally 1e5 only same for vectors
+//global arrays are always 0 initialized by default
+//if n>=1e7 so declare array outside globally.
+//and watch all  constraints carefully
+//10^7 --->(in code) 1e7 +10
+//when initialising array a[n] n ...check should be cin before
+
+//break in loops or if or while
+//less variables
+//less results variables..do operations in that result only like subtract add at same time
+
+// how many times N can be divided by 2, let a:
+// 2^a = N   ..a times
+//time complexity for N divide by 2 or n=n/2 is : a=log(2)N
+
+//Always try to O(n) ---> O(log n) 
+//time complexity can be calculted by counter variable
+
+//(a+b) % M = ((a%M)+(b%M))%M
+//(a*b) % M = ((a%M)*(b%M))%M
+//(a/b) % M = ((a%M)* (b^(-1)%M) )%M
+//(a-b) % M = ((a%M)-(b%M)+M)%M        no effect on equation of +M because M%M makes it zero
+
+//eg. 21! will print a negative number as very large and cannot be contained in long long
+//so ques asks to print the modulo M let say M=47 ..so the answer will come less than 47.
+//to implement this we cannot take 21!%M because 21! is already coming negative as very large
+//so therefore we have to %M at each step(valid for addtion and multiplication) as this would ...
+//...not effect the process as ATT equations.
+
+//precomputations to decrease the time complexity when tle occurs
+//reduce loop inside loop.
+//precompute some values and use them for future value calculations
+//techniques for precomputation- hashing, prefix sum for 1d&2d arrays, etc
+
+//hashing
+//only 10^7 iterations can run in 1sec not more than that
+//if time comp. is coming greater than 10^7 like 10^10,etc we need to reduce time comp by precomp
+//use hash array to store count of each index value to use them in o(1) time
+//for negative numbers if let array range is -6 to 5...so add +6 to all numbers to make them... 
+//...positive and then make hash array for that new array...
+//...and to give count , add 6 to that number(no. from previous array) and give its count
+
+//prefix (sum) array
+//create array of sum like of 3 6 2 8 9 2 will be 3 9 11 19 28 30...and subtract values at...
+//...index to get 'till index sum'
+//for 2d array make prefix sum array of 2d array then make opertaions(strategic)
+
+//combination hashing+prefix aray
+//used when add some number from one index to another
+//then if want to add 5 from index 2 to 4 in the array
+//it will beacome normallly 0 5 5 5 0...
+//to precompute, add +5 to index 2 and -5 to index 4+1 and rest all zero 
+//can do this for any no. of time then take final prefix sum array..then on..
+//..making it a prefix sum array we get the required array
+//best method to precompute and avoid tle
+
+//in-built gcd function
+// __gcd(a,b)
+// TC- O(log(max of a or b))...O(logN) where N is bigger no. of a and b
+
+//if written "Sum of N over all the test cases will be less than or equal to 1e6."
+//...and constraints given as [2 ≤ T,N ≤ 1e5], [1 ≤ Q ≤ N]
+//means then ignore test case part time complexity as sum of N in all test cases is 1e6
+// so O(T*N) becomes O(N) which is equal to 1e6
+//O(T*N)=O(N)=1e6(sum of n in all test cases)
+
+//for precomputing gcd ques of gcd of (1tol-1, r+1toN)
+//by using 2 forward and backward gcd prefix arrays..one for 1tol-1, an other for r+1toN
+
+//------------------------------------------------------------------------------
+//c++ stl(standard template library)
+//1.containers
+//  ->sequential-vectors, stack , queue, pair(not a container, it is a class of cpp)
+//  ->ordered- maps , multimap, set , multiset
+//  ->unordered- unordered maps , sets
+
+//1.5 nested containers
+//  ->vector<vector<int>>
+//  ->map<int, vector or <int>>
+//  ->set<pair<int, string>
+//  ->vector<map<int,set<int>>>
+
+//2.iterators(similar to pointers)(point to memory address of elements of stl containers)
+//  begin()
+//  end() --> vector<int>::iterator it;
+//  continuity(+1/+2 directly) and discontinuity(like in sets and maps) in iterators
+
+//3.Algorithms
+//  upper bound(algo based on bin search in logn), 
+//  lower bound, 
+//  sort(comparator ie custom sort)[nlogn sort,merge sort], 
+//  max- element(mostly used in vectors and arrays),
+//  min-element, 
+//  accumulate, (array sum easily)
+//  reverse, (array/vector/string reverse)
+//  count, (find count of element in container)
+//  find, (find position of elememt)
+//  next permutations, 
+//  previous permutations.
+
+//4.functors(classes which can act as functions)
+
+// Pair( first khancha, then values { , }, then .first .second)
+// (it is a class in c++stl which stores two values)
+// pair<int, string> p;   {it can be containers/data types, etc}
+// p= make_pair(2, "abc");   or, ---->   p={2, "abc"}; {both are valid syntax, pair m value dallne ke liye}
+// cout << p.first << " " << p.second << '\n';
+
+// by copy
+// pair<int, string> p; 
+// p={2, "abc"};
+// pair<int, string> p1 = p;
+// p1.first=3; 
+// cout << p.first << " " << p.second << '\n';   ..[output: 2 abc]
+
+// by reference (becomes p=p1)
+// pair<int, string> p; 
+// p={2, "abc"};
+// pair<int, string> &p1 = p;
+// p1.first=3; 
+// p.first=4; 
+// cout << p.first << " " << p.second << '\n';   ..[output: 4 abc]
+// cout << p1.first << " " << p1.second << '\n';   ..[output: 4 abc]
+
+// used in arrays to make similar operations between indices of two arrays
+// pair<int, int> p_arr[3];
+// p_arr[0]={1,2};
+// p_arr[1]={2,3};
+// p_arr[2]={3,4};
+// swap(p_arr[0], p_arr[2]);   //this
+// for (int i = 0; i < 3; i++)
+// {
+//  cout << p_arr[i].first << " " << p_arr[i].second << '\n';
+// }
+//if swaped a pair with another the whole pair would get swaped
+//more efficient is vector of pairs
+
+
+//vectors
+// these are arrays only but with dynamic size
+// vetor<int> v;  {any data type/container inside like vector<pair<int, int>> v;}
+//  int n;
+//     cin >> n;
+//     vector<int> v;
+//     for (int i = 0; i < n; i++)
+//     {
+//         int x;
+//         cin >> x;
+//         v.push_back(x); //O(1)
+//          v.pop_back();  //pops last value from vector O(1)
+//     }
+
+//     for (int i = 0; i < v.size(); i++) //O(1)
+//     {
+//         cout << v[i]<<" "; 
+//     }  
+//vector<int> v(10); ---> same as v(10,0(fill all with 0))
+//vector<int> v(10, 3); ---> [otput: 3 3 3 3 3 3 3 3...]
+//we cannot copy in array like a1=a2 as array pass by reference but we can do this vectors
+//vector<int> v2=v (pass by copy); //O(n) [just like for loop copy internally]
+//like arrays(like in all continuous memory allocations),
+//it also has max capacity of 10e5 locally and 10e7 globally
+//jiski copy ban rahi h usme yadi '&' lagaden to by refernce ho jayega copy nahi banegi
+//1. vector<int> &v2=v;
+//2. void printVec(vector<int> &v){...}
+
+//Nesting of containers
+//1. Vector of Pairs ---> vector<pair<int, int>> v;
+//2. Array of vectors --> vector<int> v[10];  //10 vectors of size zero
+//3. Vector of vector --> vector<vector<int>> v;                    
+
+//Vector of Pairs 
+//---> vector<pair<int, int>> v = {{1,2}, {3,4}, {4,5}};  
+//only this and related changes everywhere
+//v.pushback({x,y})  or    v.pushback(make_pair(x,y)) //pushback fullpair ek saath
+//just suppose pair as single quantity for vector operations
+
+//Array of vectors
+//to make array of any container, vaeiable just put '[]' after that.
+//vector<int> v[10];  //made 10 vectors of size zero
+//v[0], v[2], v[3], ....v[9] are 10 zero size vectors
+//v is just replaced by v[i]  that means when writing printvec(v[i]) , 
+//the void function is getting v vector as input.
+
+//vector of vectors
+// vector<vector<int>> v;
+// for (int i = 0; i < N; ++i)
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> temp;
+//     for (int j = 0; j < n; ++j)
+//     {
+//         int x;
+//         cin >> X;
+//         temp.push_back(x);
+//     }
+//     v.push_back(temp);  //as vector v is storing vectors only so input is also a vector
+// }
+// for (int i = 0; i < V.size(); ++i)
+// {
+//     printvec(V[i]);
+// }
+// cout << v[0][1];
+// }
+//we can push or pop values from any vector inside the vector
+//we can also puch or pop empty vector inside the vector --> v.push_back(vector<int> ());
+//we can also use first the empty vector to pushback then filling it 
+// #include <bits/stdc++.h>
+// using namespace std;
+// void printVec(vector<int> &v)
+// {                                      // use &v to not make copy
+//     for (int i = 0; i < v.size(); i++) // O(1)
+//     {
+//         cout << v[i]<< " ";
+//     }
+//     cout << '\n';
+// }
+
+// int main()
+// {
+
+//     int N;
+//     cin >> N;
+
+//     vector<vector<int>> v;
+
+//     for (int i = 0; i < N; i++)
+//     {
+//         int n;
+//         cin >> n;
+//         v.push_back(vector<int>());  //empty vector is pushing every time then filling it
+
+//         for (int j = 0; j < n; j++)
+//         {
+//             int x;
+//             cin >> x;
+//             v[i].push_back(x);
+//         }
+//     }
+
+//     for (int i = 0; i < N; i++)
+//     {
+//         printVec(v[i]);
+//     }
+
+//     return 0;
+// }
+// we can also make vector of vector of pair or vector of vector of vectors
+//vector<vector<pair<int, int>>> v;
+//vector<vector<vector<int>>> v; then v[0][1] is a vector v[0][1].push_back(temp);
+
+//Iterators
+//iterators are used when there is no indexing used in the containers(like maps, sets, etc)
+//so to access(take input or output)/change the values of containers(maps/sets), iterators are used
+//v.begin --> for iterator pointing first value
+//v.end --> for iterator pointing next to last value
+//to write iterator, synt- (container of which iterator to be declared) :: iterator it;
+//vector <int> :: iterator it = v.begin;  //this iterator will point first value of vector
+//cout << (*it) << endl;   //this will print the value at which iterator is pointing
+//cout << (*it+1) << endl;   //this will print the next value at which iterator is pointing as it is continuous
+//we can iterate containers using iterators for taking inputs, printing output, or any function
+//containers which have index system like vectors can be done by loop till v.size()
+//but for maps and sets we have to use iterator only as an input to for loop
+//vector <int> :: iterator it = v.begin;   
+// for(it=v.begin(); it!=v.end(); it++){ 
+//  cout << (*it) << " ";
+// }
+// it+1 and it++ are different, (but same in case of vector as continuous)
+//it+1 is shift to next continuous location, and it++ is shift to next iterator
+//it+1 will not work(invalid) in case of non continuous containers as not continuous, but it++ will
+//work all time as it shifts to next pointing iterator value of container
+//in case of vector<pair<int, int>> to access pair (*it).first or (it->first) both are same synt.
+//this is used for pairs or containers with first, second , third etc
+
+//c++ 11 features to write iterators codes in short
+//range based loops and auto keywords.
+
+// Ranged based Loops, this for loop can be written..
+//for({datatype of container(int, string or pair,vector(if nested)} value : {name of the conatiner}){
+//  cout<< value;
+// }
+//so therefore..,
+//vector <int> v={2,3,5,6,7};                   //vector <int> v={2,3,5,6,7};           
+//vector <int> :: iterator it = v.begin;  -->   //for(int value : v){   //by copy
+// for(it=v.begin(); it!=v.end(); it++){        //  cout<< value;                       
+//  cout << (*it) << " ";                       // }                                    
+// }
+//all values at which all the iterators are pointing in a conatainer(any) goes in the variable 
+//'value'(by copy so use '&' for reference &value) one by one and gets printed. This is 
+//used for any container like maps, vector , sets, etc.
+//variables declared inside 'for' are made by copy
+//similarly for vector of pairs:
+//vector<pair<int, int>> v_p ={{1,2},{3,4},{6,7}};  
+//for(pair<int,int> &value : v_p){   //by copy
+//  cout<< value.first << " " << value.second << '\n';
+// }
+
+//Auto keywords
+//'auto' automatically finds the datatype of any value
+//auto a = '1'; //then auto will store '1' as a int value in 'a'
+//auto a = '1.0'; //then auto will store '1.0' as a float value in 'a'
+//this is helpful in iterators..
+//vector <int> v={2,3,5,6,7};                   //vector <int> v={2,3,5,6,7};
+//vector <int> :: iterator it = v.begin;   -->  // for(auto it=v.begin(); it!=v.end(); it++){ 
+// for(it=v.begin(); it!=v.end(); it++){        //  cout << (*it) << " ";   
+//  cout << (*it) << " ";                       // }
+// }
+//it wil atmtcly find that it is iterator of vector of int.
+//similarly for vector of pairs:
+//vector<pair<int, int>> v_p ={{1,2},{3,4},{6,7}};  
+//for(auto &value : v_p){   //by copy
+//  cout<< value.first << " " << value.second << '\n';
+// }
+//aymtcly detemines that v_p is a vector of pair of int,int
+//here, it knows that a pair would come in value and variable value has datatype of pair
+
+//therefore summary of range based loops and auto is that
+//write for loop for iterators like this(in snippets also)
+//vector<pair<int, int>> v_p ={{1,2},{3,4},{6,7}};  
+//for(auto &value : v_p){   //by copy
+//  cout<< value.first << " " << value.second << '\n';  
+// }
+
+//Maps
+//Unordered Maps
+//Multimaps
+
+//Maps is a DS which stores key and value (any datatype or complex container)
+//it create mapping betwwen key to value
+//so we can access the mapping between key and the value
+//in normal maps the value are stored in sorted order according to key
+//in unorderd maps the value are not stored in sorted order but has difference in complexity
+//The normal  maps are implemented internally using 'RED BLACK TREES' (it is a self balancing tree)
+//every element of map is a pair storing key and value
+//in elements of maps can be anywhere in the memory and have links between them
+//so we cannot do it+1 we can only do it++
+//code and syntax
+// map <int, string > m;
+// m[1] = "abc";  //O(log(n)) //n (current size) //so increses by log(n) for every input and output
+// m[5] = "cdc";
+// m[3] = "acd";
+// m.insert ({4, "afg"});  //we can also write this
+//the inertion Time.Complexity depends on key length also as...
+//...when we insert any key then it is inserted after getting sorted internally by comparing.. 
+//..to each key value..if key is string then its size will also matter in TC in logn operations
+//..so effective TC comes out to be : T.C - O( s.size() * (logn) ) {s is size of that string which is inserted}
+//..comparing one string to another takes logn time
+//it also has function of vector like m.size(). these fucntions are common in all containers
+//by default if written only key then if value is string then empty string get stored with key value
+//by default if written only key then if value is int/double/float then '0' get stored  with key value
+//by default if written only key then if value is vector then 'empty vector' get stored  with key value
+//key values cannot be repeated they are stored uniquely, if repeated they overwrite previous value
+//   for(auto &value : m){    //O(n(logn))
+//  cout<< value.first << " " << value.second << '\n';   //O(logn)
+// }
+//m.find($key) //O(logn) - find any value using key, returns the iterator so store it in iterator
+//auto it = m.find(3); //if no value is there for that key then it will return 'm.end' value 
+//m.erase($key or $it) //O(logn)- the entered key and coressp value will be deleted from the map..
+//..or the entered 'it' corrsp to particular pair will be deleted
+//m.erase(3);
+//or same as
+//auto it = m.find(3);
+//if(it != m.end){   //safety check escape from segm fault and run rest code    
+//    m.erase(it);  //cnnot give 'it' which does not exist othws segmt fault
+// }
+//m.clear(); - clears whole map(or any container) values
+
+//Unordered maps
+//it is different from normal maps in inbiult implementation,T.C,valid keys datatype rest same
+//unordered_map<int ,string> m;
+//not stored in sorted order.(but randomly, not also in manner of declaration, just random)
+//inbuilt implemention of this is they use hash tables and not trees unlike maps
+//a hash is made for every key
+//at every place instead of O(logn) it time complexity reduces to O(1)[avg T.C] using hash tables 
+//all functions are same as maps
+//used when order sdoes not matter
+//For valid keys datatype- we can set key and value datatype to any complexity but this is not
+//..with the case of un_maps. as they are stored using hash values. int,double,float,string
+//..have hash values so can used in un_mpas and pairs, sets, vectors , sets os sets, etc 
+//does not have hash values but maps can use them as they can be compared.
+
+//Multimaps
+
+
